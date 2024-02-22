@@ -28,7 +28,7 @@ if st.button("Start/Restart"):
     st.session_state.clear()
     st.session_state.messages = []
     st.session_state.lead_first_name = lead_first_name
-    st.session_state.least_last_name = lead_last_name
+    st.session_state.lead_last_name = lead_last_name
     st.session_state.lead_email = lead_email
     st.session_state.temp = temp
     st.session_state.model = model
