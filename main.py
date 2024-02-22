@@ -11,8 +11,8 @@ dotenv.load_dotenv()
 st.sidebar.title("Inputs")
 st.sidebar.write('modify these then press Start/Restart on the right')
 lead_first_name = st.sidebar.text_input("Lead First Name", value = "Susan")
-company_name = st.sidebar.text_input("Company Name", value = "Acme Co")
-industry = st.sidebar.text_input("Industry", value = "Health Insurance")
+lead_last_name = st.sidebar.text_input("Lead Last Name", value = "Smith")
+lead_email = st.sidebar.text_input("Lead Email", value = "susan@gmail.com")
 temp = 0#st.sidebar.slider("Temperature", min_value = 0.0, max_value = 1.0, value = 0.0, step = 0.1)
 model = "gpt-4-1106-preview"#st.sidebar.selectbox("Model", ["gpt-4-1106-preview", "gpt-3.5-turbo"])
 max_tokens = 200#st.sidebar.slider("Max Tokens", min_value = 50, max_value = 500, value = 200, step = 50)
@@ -28,8 +28,8 @@ if st.button("Start/Restart"):
     st.session_state.clear()
     st.session_state.messages = []
     st.session_state.lead_first_name = lead_first_name
-    st.session_state.company_name = company_name
-    st.session_state.industry = industry
+    st.session_state.least_last_name = lead_last_name
+    st.session_state.lead_email = lead_email
     st.session_state.temp = temp
     st.session_state.model = model
     st.session_state.max_tokens = max_tokens
