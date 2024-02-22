@@ -11,7 +11,7 @@ openai = OpenAI(max_retries = 5)
 
 def generate_streaming_response(self, messages, model = 'gpt-4-turbo-preview', max_tokens=200):
     try:
-        response = openai.chat.completions.create(model=model, messages=messages, max_tokens=max_tokens, stream=True)
+        response = openai.chat.completions.create(model=model, messages=messages, max_tokens=max_tokens, stream=True, temperature = 0)
         big_chunk = ""
         for chunk in response:
             chunk = chunk.choices[0].delta.content
