@@ -17,7 +17,7 @@ def initialize_prompt_and_text(session_state):
         'lead_last_name': session_state.lead_last_name,
         'lead_email': session_state.lead_email,
         'agent_name': 'Spencer',
-        'booking_link': 'spoton_booking.com'
+        'booking_link': sesssion_state.booking_link
     }
     initial_text = initial_text.format(**to_format)
     system_prompt = system_prompt.format(**to_format)
